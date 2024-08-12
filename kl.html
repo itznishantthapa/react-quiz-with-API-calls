@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">click me1</button>
+    <button id="btn2">click me2</button>
+    <button id="btn3">click me3</button>
+    <button id="btn4">click me4</button>
+
+    <script>
+        // const val=document.getElementById("btn");
+        // console.log("Extracted value ",val.innerText)
+
+        const btns = document.querySelectorAll("button");
+        btns.forEach((btn)=>{
+            btn.addEventListener('click',()=>{
+                console.log(btn.getAttribute('id'), " was clicked")
+                console.log(btn.innerText , " Do you need this?")
+            });
+        });
+    </script>
+</body>
+</html>
